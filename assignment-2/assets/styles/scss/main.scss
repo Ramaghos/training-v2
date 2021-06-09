@@ -1,0 +1,138 @@
+@import "variable";
+
+.carousel {
+  background: url(../../images/bg.jpg) no-repeat;
+  height: 690px;
+  width: 100%;
+  background-position: center;
+}
+
+header {
+  max-width: 1830px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 42px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .mob-nav {
+    @media #{$sm-up} {
+      display: none;
+    }
+  }
+
+  nav {
+    font-family: $Montserrat-heading-nav;
+    @media #{$sm-down} {
+      display: none;
+    }
+    a {
+      font-size: 13px;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-left: 38px;
+      display: inline-flex;
+      align-items: center;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+.head-content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: inherit;
+  .head {
+    max-width: 500px;
+    margin-top: 72px;
+  }
+  .paragraph-style {
+    color: $dark-grey;
+  }
+}
+.sec-spacing {
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 93px;
+  .content-spacing {
+    max-width: 543px;
+    margin: 0 auto;
+  }
+}
+.uldisplay {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 18px;
+  padding: 10px 57px;
+  justify-content: center;
+
+  li {
+    width: calc(0% - 18px);
+    @media #{$xl-down} {
+      min-width: 283px;
+    }
+  }
+}
+.blue-box {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  overflow: hidden;
+  div {
+    padding: 20px 20px;
+  }
+}
+.contact-us {
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+.form-style {
+  display: inline-block;
+  margin-bottom: 100px;
+  .form-group {
+    display: flex;
+  }
+}
+footer {
+  background-color: $black;
+  .footer-content {
+    margin: 0 200px;
+    display: flex;
+    justify-content: space-between;
+
+    @media #{$md-down} {
+      .menu1,
+      .menu2,
+      .menu3 {
+        display: none;
+      }
+      margin: 0 50px;
+    }
+
+    .footer-width {
+      width: 20%;
+    }
+    .footer-width a {
+      color: $white;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+    }
+  }
+  span {
+    color: $white;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+  p {
+    line-height: 10px;
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+}
