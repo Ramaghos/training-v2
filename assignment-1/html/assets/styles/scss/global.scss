@@ -1,0 +1,242 @@
+@import 'variable';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $poppins;
+    font-size: 16px;
+    color: $black;
+    line-height: normal;
+}
+
+a {
+    text-decoration: none;
+    color: $black;
+    transition: all 0.3s;
+
+    &:hover {
+        color: $pink;
+    }
+}
+
+/* Heading Style */
+h1 {
+    font-size: 90px;
+    font-weight: 900;
+    line-height: 80px;
+    margin: 30px 0;
+
+    @media #{$sm-down} {
+        font-size: 60px;
+        line-height: 60px;
+        margin: 20px 0 70px;
+    }
+}
+
+h2 {
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 40px;
+    margin-bottom: 50px;
+
+    @media #{$sm-down} {
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+}
+
+h3 {
+    font-size: 45px;
+}
+
+h4 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+h5 {
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+h6 {
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 10px;
+
+    @media #{$sm-down} {
+        font-size: 10px;
+    }
+}
+
+p {
+    line-height: 28px;
+    margin-bottom: 30px;
+}
+
+/* Form Element Style */
+input, textarea {
+    font-family: inherit;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: $black;
+    width: 100%;
+    background: $light-grey;
+    padding: 20px 30px;
+    border: 0;
+    transition: all .3s;
+
+    &:focus {
+        color: $pink;
+        background: $black;
+    }
+
+    &::-moz-placeholder {
+        text-transform: uppercase;
+    }
+
+    &::-webkit-input-placeholder {
+        text-transform: uppercase;
+    }
+}
+
+/* Button Style */
+.btn {
+    font-family: inherit;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background: transparent;
+    padding: 25px 40px;
+    display: inline-block;
+    border: solid 4px transparent;
+    border-radius: 40px;
+    min-width: 240px;
+    text-align: center;
+    transition: all .3s;
+    cursor: pointer;
+
+    @media #{$sm-down} {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    &-pink {
+        border-color: $pink;
+
+        &:hover {
+            color: $white;
+            background: $pink;
+        }
+    }
+}
+
+/* Text Color Style */
+.text-pink {
+    color: $pink;
+}
+
+.text-green {
+    color: $green;
+}
+
+.text-blue {
+    color: $blue;
+}
+
+.text-orange {
+    color: $orange;
+}
+
+.text-white {
+    color: $white;
+}
+
+.text-grey {
+    color: $grey;
+}
+
+/* Text Alignment */
+.text-center {
+    text-align: center;
+}
+
+/* BG Color Style */
+.bg-pink {
+    background: $pink;
+}
+
+.bg-dark-blue {
+    background: $dark-blue;
+}
+
+.bg-light-grey {
+    background: $light-grey;
+}
+
+/* Grid Structure */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+}
+
+.grid-reset-md {
+    @media #{$md-down} {
+        display: block;
+    }
+}
+
+/* Display Flex Style */
+.display-aic {
+    display: flex;
+    align-items: center;
+}
+
+.display-aic-jcfe {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Image Style */
+img {
+    max-width: 100%;
+}
+
+.img-cover {
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: top;
+
+    @media #{$md-down} {
+        width: 100%;
+        height: 500px;
+    }
+
+    @media #{$sm-down} {
+        height: 350px;
+    }
+}
+
+/* Spacing Style */
+.sec-spacing {
+    padding: 150px 25px;
+    
+    @media #{$sm-down} {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+}

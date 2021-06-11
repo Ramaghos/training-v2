@@ -1,0 +1,30 @@
+/* Media Query Break-points */
+$vs-up: '(min-width: 420px)';
+$xs-up: '(min-width: 576px)';
+$sm-up: '(min-width: 768px)';
+$md-up: '(min-width: 992px)';
+$lg-up: '(min-width: 1200px)';
+
+$xl-down: '(max-width: 1500px)';
+$lg-down: '(max-width: 1199px)';
+$md-down: '(max-width: 991px)';
+$sm-down: '(max-width: 767px)';
+$xs-down: '(max-width: 575px)';
+$vs-down: '(max-width: 419px)';
+
+/* Color */
+$black: #202833;
+$grey: #999;
+$link-water: #c5c9cc;
+$pattens-blue: #dde1e4;
+$light-grey: #f3f2f7;
+$lavender: #e5e5e7;
+$white: #fff;
+$pink: #ff487c;
+$green: #a0ca4e;
+$blue: #07c2b1;
+$orange: #e38547;
+$dark-blue: #293040;
+
+/* Font Family */
+$poppins: 'Poppins', sans-serif;
