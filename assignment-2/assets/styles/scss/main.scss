@@ -17,6 +17,7 @@ header {
   justify-content: space-between;
 
   .mob-nav {
+    cursor: pointer;
     @media #{$md-up} {
       display: none;
     }

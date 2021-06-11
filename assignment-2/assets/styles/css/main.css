@@ -17,6 +17,9 @@ header {
   align-items: center;
   justify-content: space-between;
 }
+header .mob-nav {
+  cursor: pointer;
+}
 @media (min-width: 992px) {
   header .mob-nav {
     display: none;

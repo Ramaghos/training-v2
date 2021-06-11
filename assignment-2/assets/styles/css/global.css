@@ -84,7 +84,8 @@ h6 {
   margin-top: 46px;
 }
 .btn:hover {
-  color: #fff;
+  color: #07c2b1;
+  background-color: #fff;
 }
 
 p {
