@@ -17,7 +17,7 @@ header {
   align-items: center;
   justify-content: space-between;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   header .mob-nav {
     display: none;
   }
@@ -25,9 +25,23 @@ header {
 header nav {
   font-family: "Montserrat", sans-serif;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   header nav {
     display: none;
+    display: block;
+    position: absolute;
+    background: #fff;
+    top: 90px;
+    left: 15px;
+    width: calc(100% - 30px);
+    padding: 15px 25px;
+    border-radius: 5px;
+    box-shadow: 0 40px 15px -35px rgba(32, 40, 51, 0.4);
+  }
+}
+@media (min-width: 992px) {
+  header nav {
+    display: block;
   }
 }
 header nav a {
@@ -39,11 +53,23 @@ header nav a {
   align-items: center;
   letter-spacing: 1px;
 }
+@media (max-width: 991px) {
+  header nav a {
+    display: block;
+    margin: 5px 0;
+  }
+}
 
 .head-content {
   display: flex;
   justify-content: flex-end;
   align-items: inherit;
+}
+@media (max-width: 991px) {
+  .head-content {
+    justify-content: center;
+    text-align: center;
+  }
 }
 .head-content .head {
   max-width: 500px;
@@ -87,8 +113,19 @@ header nav a {
   padding-bottom: 30px;
   overflow: hidden;
 }
-.blue-box div {
+@media (max-width: 991px) {
+  .blue-box {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+}
+.blue-box > div {
   padding: 20px 20px;
+}
+@media (max-width: 991px) {
+  .blue-box > div {
+    width: calc(50% - 20px);
+  }
 }
 
 .contact-us form {

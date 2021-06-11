@@ -17,15 +17,27 @@ header {
   justify-content: space-between;
 
   .mob-nav {
-    @media #{$sm-up} {
+    @media #{$md-up} {
       display: none;
     }
   }
 
   nav {
     font-family: $Montserrat-heading-nav;
-    @media #{$sm-down} {
+    @media #{$md-down} {
       display: none;
+      display: block;
+      position: absolute;
+      background: $white;
+      top: 90px;
+      left: 15px;
+      width: calc(100% - 30px);
+      padding: 15px 25px;
+      border-radius: 5px;
+      box-shadow: 0 40px 15px -35px rgba($black, 0.4);
+    }
+    @media #{$md-up} {
+      display: block;
     }
     a {
       font-size: 13px;
@@ -35,14 +47,22 @@ header {
       display: inline-flex;
       align-items: center;
       letter-spacing: 1px;
+
+      @media #{$md-down} {
+        display: block;
+        margin: 5px 0;
+      }
     }
   }
 }
-
 .head-content {
   display: flex;
   justify-content: flex-end;
   align-items: inherit;
+  @media #{$md-down} {
+    justify-content: center;
+    text-align: center;
+  }
   .head {
     max-width: 500px;
     margin-top: 72px;
@@ -81,8 +101,16 @@ header {
   padding-top: 30px;
   padding-bottom: 30px;
   overflow: hidden;
-  div {
+  @media #{$md-down} {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  & > div {
     padding: 20px 20px;
+    @media #{$md-down} {
+      width: calc(50% - 20px);
+    }
   }
 }
 .contact-us {
