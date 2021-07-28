@@ -1,0 +1,43 @@
+[
+
+    {
+        "UserName":"Rama",
+        "Password":"rama123!",
+        "emailAddress" :"rama@v2",
+        "dateOfBirth":"29.11.1992",
+        "joiningDate":"26.5.2021"
+
+        
+    },
+    {
+        "UserName":"Ankan",
+        "Password":"ankan123!",
+        "emailAddress" :"ankan@v2",
+        "dateOfBirth":"18.11.1991",
+        "joiningDate":"1.2.2019"
+    },
+
+    { "UserName":"Bhawna",
+        "Password":"bhawna123!",
+        "emailAddress" :"bhawna@v2",
+        "dateOfBirth":"21.10.1989",
+        "joiningDate":"1.6.2021"
+
+    },
+    
+    { "UserName":"Rahul",
+        "Password":"rahul123!",
+        "emailAddress" :"rahul@v2",
+        "dateOfBirth":"1.1.1993",
+        "joiningDate":"1.1.2015"
+
+    },
+    { "UserName":"Himanshu",
+        "Password":"himanshu123!",
+        "emailAddress" :"himanshu@v2",
+        "dateOfBirth":"2.2.1990",
+        "joiningDate":"27.5.2021"
+
+    }
+
+]
