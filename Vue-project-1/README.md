@@ -1,3 +1,7 @@
+# -----------------------------userName and Password-------------------------------#
+"UserName":"Rama",
+"Password":"rama123!",
+other username and Password are inside Login.json file.
 # first-vue-project
 
 ## Project setup
