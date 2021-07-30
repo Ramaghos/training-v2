@@ -15,9 +15,6 @@ export default {
     };
   },
   mounted() {
-    // this.events.forEach((event) => {
-    //   window.addEventListener(event, resetTimer);
-    // });
     this.event.forEach(function(events) {
       window.addEventListener(events, this.resetTimer);
     }, this);

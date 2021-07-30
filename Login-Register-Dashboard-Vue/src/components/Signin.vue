@@ -7,37 +7,39 @@
 
     <div class="inner-container">
       <div class="login" v-if="loginBox">
-        <h1>Sign-in</h1>
-        <div>
-          <input
-            class="input"
-            type="text"
-            name="username"
-            v-model="input.username"
-            @blur="validInput"
-            placeholder="username"
-            :style="{ borderColor: !showForm ? 'red' : 'black' }"
-          />
-          <p v-if="!showForm" style="color: red">
-            Please enter the valid name !!!
-          </p>
-          <input
-            class="input"
-            type="password"
-            name="password"
-            v-model="input.password"
-            placeholder="password"
-            @blur="validInput"
-            :style="{ borderColor: !showForm ? 'red' : 'black' }"
-          />
-          <p v-if="!showForm" style="color: red">
-            Please enter the password !!!
-          </p>
-        </div>
-        <button type="button" v-on:click="login">Login</button>
-        <a href="#" @click="regTabFun()" style="padding: 5px;"
-          >if not a user?
-        </a>
+        <form @submit.prevent="login">
+          <h1>Sign-in</h1>
+          <div>
+            <input
+              class="input"
+              type="text"
+              name="username"
+              v-model="input.username"
+              @blur="validInput"
+              placeholder="username"
+              :style="{ borderColor: !showForm ? 'red' : 'black' }"
+            />
+            <p v-if="!showForm" style="color: red">
+              Please enter the valid name !!!
+            </p>
+            <input
+              class="input"
+              type="password"
+              name="password"
+              v-model="input.password"
+              placeholder="password"
+              @blur="validInput"
+              :style="{ borderColor: !showForm ? 'red' : 'black' }"
+            />
+            <p v-if="!showForm" style="color: red">
+              Please enter the password !!!
+            </p>
+          </div>
+          <button type="submit">Login</button>
+          <a href="#" @click="regTabFun()" style="padding: 5px;"
+            >if not a user?
+          </a>
+        </form>
       </div>
       <div v-else class="registration">
         <registration @shiftToLogin="goLogin()"></registration>
@@ -45,11 +47,6 @@
     </div>
   </div>
 
-  <!-- <div v-else>
-    <dashboard>
-      <p>{{ input.username }}</p>
-    </dashboard>
-  </div> -->
   <pulse-loader :loading="loading" :color="color" :size="size"></pulse-loader>
 </template>
 
@@ -72,16 +69,7 @@ export default {
       loading: false,
     };
   },
-  // beforeRouteEnter(to, from, next) {
-  //   console.log(to, from, next);
-  //   next();
-  // },
-  // beforeRouteLeave(to, from, next) {
-  //   // console.log(to, from, next);
-  //   if (this) {
-  //     next();
-  //   }
-  // },
+
   methods: {
     loginTabFun() {
       this.loginBox = true;
@@ -94,7 +82,6 @@ export default {
       this.loginBox = true;
     },
 
-    //we need to use spread operator when we are putting more than one function inside actions.
     ...mapActions(["userLogin", "actionFetchAllData"]),
     login() {
       this.loading = true;
@@ -117,20 +104,9 @@ export default {
               this.SignInValidation.push(user);
             }
             console.log(this.SignInValidation);
-            //these are the two ways to accept javascript object
-            //if no data it will through error in console
-            // for (let userdata in res.data) {
-            //   this.SignInValidation.push({
-            //     UserName: userdata.UserName,
-            //     Password: userdata.Password,
-            //   });
-            // }
-            // // this.SignInValidation = [res.data];
-            // console.log(this.SignInValidation);
+
             this.actionFetchAllData(this.SignInValidation);
-            //if no data it will not through an error in console
-            // this.SignInValidation = res["data"];
-            // console.log(this.SignInValidation[0]);
+
             this.UserData = this.SignInValidation.find(
               (user) =>
                 user.UserName === this.input.username &&
@@ -142,38 +118,21 @@ export default {
               Object.keys(this.UserData).length != 0
             ) {
               console.log("signed in");
-              // this.$store.commit("setAuth", true);
+
               this.userLogin();
-              // this.$store.commit("addUserDetail", this.UserData);
+
               this.$store.dispatch("addMemberDetails", this.UserData);
               console.log(this.$store.getters.getUserDetails);
               console.log(this.$store.getters.userUsAuthenticated);
 
-              // this.$router.push("/dashboard-page/" + this.input.username);
               this.$router.push("/dashboard-page/" + this.input.username);
             } else {
               console.log("fill correct username and password");
-              //this.showForm = !this.showForm;
+
               this.loading = false;
             }
           });
       }, 3000);
-
-      // this.UserData = this.SignInValidation.find(
-      //   (user) =>
-      //     user.UserName === this.input.username &&
-      //     user.Password === this.input.password
-      // );
-      // if (this.input.username != "" && this.input.password != "")
-
-      // if (this.UserData) {
-      //   console.log("signed in");
-
-      //   this.$router.push("/dashboard-page/" + this.input.username);
-      // } else {
-      //   console.log("fill correct username and password");
-      //   //this.showForm = !this.showForm;
-      // }
     },
 
     validInput() {

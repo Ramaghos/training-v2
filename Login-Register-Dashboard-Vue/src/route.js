@@ -25,29 +25,11 @@ const router = createRouter({
       meta: { auth: true },
     },
 
-    // {
-    //   path: "/auto-logout",
-    //   component: AutoLogout,
-    // },
     {
       path: "/dashboard-page/:username",
       component: Dashboard,
       meta: { auth: false },
     },
-    // {
-    //   path: "/tasks/add",
-    //   component: AddTask,
-    //   meta: { auth: false },
-    // },
-    // {
-    //   path: "/tasks/:id",
-    //   component: ViewTask,
-    // },
-    // {
-    //   path: "/tasks",
-    //   component: AllTask,
-    //   meta: { auth: false },
-    // },
   ],
 });
 
