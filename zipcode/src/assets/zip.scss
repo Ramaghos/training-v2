@@ -1,0 +1,19 @@
+.zipCode {
+  margin: 100px;
+  width: 600px;
+  box-shadow: 1px 3px 7px 0px;
+  padding: 20px;
+  button {
+    cursor: pointer;
+    margin-left: 5px;
+  }
+  table {
+    margin-top: 40px;
+    table,
+    th,
+    td {
+      border: 1px solid #c4d8f3;
+      padding: 10px;
+    }
+  }
+}
